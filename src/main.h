@@ -31,7 +31,7 @@ static const unsigned int MAX_BLOCK_SIZE = 1000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
-static const int64 MIN_TX_FEE = .01;
+static const int64 MIN_TX_FEE = 1;
 static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64 MAX_MONEY = 10000000 * COIN; // sweet: maximum of 840k coins
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
@@ -77,7 +77,7 @@ extern int64 nTransactionFee;
 extern int64 nMinimumInputValue;
 
 // Minimum disk space required - used in CheckDiskSpace()
-static const uint64 nMinDiskSpace = 52428800;
+static const uint64 nMinDiskSpace = 5242880;
 
 
 class CReserveKey;
